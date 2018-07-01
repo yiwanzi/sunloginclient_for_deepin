@@ -67,19 +67,16 @@ How to use:
     当程序运行后，你可以在浏览器输入http://xxx.xxx.xxx.xxx:30080 ( xxx.xxx.xxx.xxx 是你电脑的IPV4地址，如果是本机访问，可以是127.0.0.1 ) 然后进行一些操作（如登录，注销或更改设置）
 
 Note:
-注意：
     1) You'd better close your system's firewall if you want have a better use of the functions on Sunlogin Client
-    1）为了保证功能正常使用，最好关掉你的系统防火墙
-
     2) You should make your system's firewall allow other computer to access 30080 port(TCP), if you want do operations in other computer(unless you close you firewall)
-    2）你必须要让系统防火墙允许其他电脑访问你的30080端口（TCP），如果你想在其他计算机上进行操作（除非你关闭防火墙）
-
     3) You should make your system's firewall allow other computer to access Wakeup port(UDP) you have set , if you want to use wake up function(unless you close you firewall)
-    3）如果你想使用唤醒功能，你应该让你的系统的防火墙允许其他计算机访问你设置的唤醒端口（UDP）（除非你关闭了防火墙）
-
     4) You should make your system's firewall allow other computer to access LAN discovery port(UDP) you have set , if you want to direct connected by Sunlogin Remote within same LAN(unless you close you firewall)
-    4）如果您想要通过Sunlogin Remote在同一LAN内直接连接，您应该让系统的防火墙允许其他计算机访问您设置的LAN发现端口（UDP）（除非您关闭了防火墙）
 
+注意：
+    1）为了保证功能正常使用，最好关掉你的系统防火墙
+    2）你必须要让系统防火墙允许其他电脑访问你的30080端口（TCP），如果你想在其他计算机上进行操作（除非你关闭防火墙）  
+    3）如果你想使用唤醒功能，你应该让你的系统的防火墙允许其他计算机访问你设置的唤醒端口（UDP）（除非你关闭了防火墙） 
+    4）如果您想要通过Sunlogin Remote在同一LAN内直接连接，您应该让系统的防火墙允许其他计算机访问您设置的LAN发现端口（UDP）（除非您关闭了防火墙） 
 
 Copyright(C) 2009-2018 Oray-All Rights Reserved.
 www.sunlogin.com
