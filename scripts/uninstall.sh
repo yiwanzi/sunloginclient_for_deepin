@@ -22,7 +22,7 @@ do
 done
 
 echo "Removing files"
-if [ $os_name == 'ubuntu' ]; then
+if [ $os_name == 'ubuntu' ] || [ $os_name == 'deepin' ]; then
 	if [ $os_version_int -lt 15 ]; then
 		rm /etc/init/runsunloginclient.conf > /dev/null 2>&1
 	else

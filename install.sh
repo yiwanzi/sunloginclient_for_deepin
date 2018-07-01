@@ -99,7 +99,7 @@ function gdm_init_create
 
 }
 
-if [ $os_name == 'ubuntu' ] || [ $os_name == 'centos' ] || [ $(echo $os_name |grep redhat) != "" ]; then
+if [ $os_name == 'ubuntu' ] || [ $os_name == 'deepin' ] || [ $os_name == 'centos' ] || [ $(echo $os_name |grep redhat) != "" ]; then
 	echo 'check operate system OK'
 else
 	echoAndExit 'unknown OS it not impl'
@@ -144,7 +144,7 @@ chmod +x ./install.sh
 cp  README $path_main/
 
 #echo "create init"
-if [ $os_name == 'ubuntu' ]; then
+if [ $os_name == 'ubuntu' ] || [ $os_name == 'deepin' ]; then
 	cp ./scripts/lightdm.conf /usr/share/lightdm/lightdm.conf.d/50-slscreenagrentsvr.conf > /dev/null 2>&1
 	if [ $? -ne 0 ]; then
 		echo 'no pos /usr/share/lightdm, so modify base lightdm.conf file'

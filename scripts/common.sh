@@ -51,6 +51,9 @@ function get_os_name()
     elif grep -Eqi "Debian" /etc/issue || grep -Eq "Debian" /etc/*-release; then
         DISTRO='Debian'
         PM='apt'
+    elif grep -Eqi "Deepin" /etc/issue || grep -Eq "Deepin" /etc/*-release; then
+        DISTRO='Deepin'
+        PM='apt'
     elif grep -Eqi "Ubuntu" /etc/issue || grep -Eq "Ubuntu" /etc/*-release; then
         DISTRO='ubuntu'
         PM='apt'
@@ -68,7 +71,8 @@ os_version='0.0'
 
 if [ $os_name == 'ubuntu' ]; then
 	os_version=`cat /etc/issue | cut -d' ' -f2`
-
+elif [ $os_name == 'Deepin' ]; then
+	os_version=`cat /etc/issue | cut -d' ' -f3`
 elif  [ "$os_name" == "centos" ] || [ $(echo $os_name |grep redhat) != "" ] ; then
 	os_version=`rpm -q centos-release|cut -d- -f3`
 fi

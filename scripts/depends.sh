@@ -94,7 +94,7 @@ function ubuntu_install
 
 packet=''
 
-if [ $os_name == 'ubuntu' ]; then
+if [ $os_name == 'ubuntu' ] || [ $os_name == 'deepin' ]; then
 	packet=$(ubuntu_install "$depends")
 elif  [ "$os_name" == "centos" ] || [ $(echo $os_name |grep redhat) != "" ] ; then
 	packet=$(centos_install "$depends")

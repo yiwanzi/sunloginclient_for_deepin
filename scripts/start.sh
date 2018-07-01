@@ -63,7 +63,7 @@ done
 check_root "Installed Sunlogin client needs root to start"
 ifconfig_bin='ifconfig'
 
-if [ $os_name == 'ubuntu' ]; then
+if [ $os_name == 'ubuntu' ] || [ $os_name == 'deepin' ]; then
 	if [ $isinstalled == true ]; then
 		if [ $os_version_int -lt 15 ]; then
 			isinstalledubuntu

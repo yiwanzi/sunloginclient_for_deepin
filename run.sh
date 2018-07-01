@@ -59,7 +59,7 @@ do
 done
 
 
-if [ $os_name == 'ubuntu' ]; then
+if [ $os_name == 'ubuntu' ]||[ $os_name == 'deepin' ]; then
 	if [ $os_version_int -lt 15 ]; then
 		isinstalledubuntu
 	else

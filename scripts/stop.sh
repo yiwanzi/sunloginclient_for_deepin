@@ -17,7 +17,7 @@ done
 #check root
 check_root "Installed Sunlogin client needs root to stop"
 
-if [ $os_name == 'ubuntu' ]; then
+if [ $os_name == 'ubuntu' ] || [ $os_name == 'deepin' ]; then
 	if [ $os_version_int -lt 15 ]; then
 		initctl stop runsunloginclient --system
 	else
