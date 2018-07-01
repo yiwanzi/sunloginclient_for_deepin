@@ -1,3 +1,11 @@
+This is a special version, add support for Deepin Linux
+
+After the installation is complete,you can use the following command to stop or start the service.
+
+sudo systemctl start runsunloginclient
+
+sudo systemctl stop runsunloginclient
+
 Sunlogin Client for linux Version 9.6.0.11866
 
 
