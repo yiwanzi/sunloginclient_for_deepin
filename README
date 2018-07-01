@@ -1,71 +1,84 @@
 This is a special version, add support for Deepin Linux
-
 After the installation is complete,you can use the following command to stop or start the service.
 
-sudo systemctl start runsunloginclient
+这是一个特殊版本，增加了对Deepin Linux的支持
+安装完成后，可以使用以下命令停止或启动服务
 
+sudo systemctl start runsunloginclient
 sudo systemctl stop runsunloginclient
+
 
 Sunlogin Client for linux Version 9.6.0.11866
 
-
-
 Function introduction:
   When you use this version of Sunlogin Client for linux you have 
-	1)Remote desktop		:You can control this computer by another operating platform(a computer, intelligent mobile phone or a pad)
-	2)Remote file management	:You can manage this computer's file system and transfer file with another operating platform(a computer, intelligent mobile phone or a pad)
-	3)ssh				:You can use this computer's ssh service by another operating platform(a computer, intelligent mobile phone or a pad) 
-	4)Wake up function		:You can wake up or shut down this machine by Sunlogin Remote if you have a wake-up stick
-	5)VPN 			        :You can connect with other computers within a VPN net
+	1)Remote desktop: You can control this computer by another operating platform(a computer, intelligent mobile phone or a pad)
+	2)Remote file management: You can manage this computer's file system and transfer file with another operating platform(a computer, intelligent mobile phone or a pad)
+	3)ssh: You can use this computer's ssh service by another operating platform(a computer, intelligent mobile phone or a pad) 
+	4)Wake up function: You can wake up or shut down this machine by Sunlogin Remote if you have a wake-up stick
+	5)VPN: You can connect with other computers within a VPN net
 
-
-
+功能介绍：
+  当你使用这个版本的Sunlogin Client for Linux时，你将拥有
+  1）远程桌面：您可以通过其他操作平台（电脑，智能手机或平板电脑）控制此电脑，
+  2）远程文件管理：您可以管理这台电脑的文件系统，并与其他操作平台的设备传输文件（电脑，智能手机或平板电脑）
+  3）ssh：您可以通过其他操作平台（计算机，智能手机或平板电脑）使用此计算机的ssh服务，
+  4）唤醒功能：如果您有唤醒棒，可以通过Sunlogin Remote唤醒或关闭本机
+  5）VPN：您可以通过VPN网络连接的其他计算机
 
 How to use:
-  When you get the package of Sunlogin Client for linux Version 9.6.0.11866 named sunloginclient_packet.tar.gz (or some other name), input
-		
-		tar xf sunloginclient_linux.tar.gz
-		cd sunloginclient
+使用以下命令下载解压文件，并进入文件夹内:
+  wget https://github.com/tiaen/sunloginclient_for_deepin/archive/master.zip
+  unzip sunloginclient_for_deepin-master.zip
+  cd sunloginclient_for_deepin-master
 
   1)Green version:
     Then you can find a shell script file named run.sh , if you just want to use the Remote desktop function and do not want to install it, just run this script
-		
+  1）绿色版：
+    你将看到run.sh文件，如果你不想安装而只想临时使用远程桌面功能，运行它即可:
+
 		./run.sh
 	
     If you system have installed firefox , it will automatically pop up firefox browser interface and the address is http://xxx.xxx.xxx.xxx:30080/ (xxx.xxx.xxx.xxx is your computer's ipv4 address), You can find the Quick Code and Security Code ,you can use Quick Code and Security Code to control this computer by another operating platform(a computer, intelligent mobile phone or a pad).
 
   2)Installed version:
     If you to install this version of Sunlogin Client for linux , input the following content as root
+  2）安装板：
+    如果你想完整安装，使用root权限执行以下命令:
 
 		./install.sh
     
-    If you want to uninstall it you can go the path you installed in (/usr/local/sunlogin) and into the scripts path
-
-		cd /usr/local/sunlogin
-
-    Or just at the current path above , input the following content as root
+    If you want to uninstall it you can go the path you installed in (/usr/local/sunlogin) and into the scripts path。Or just at the current path above , input the following content as root
+    如果要卸载，需要到安装路径(/usr/local/sunlogin)，或者在当前路径下进入（./scripts）执行以下命令:
 
 		./uninstall.sh
 
     When you have installed this version of Sunlogin Client , you want to start it , input the following content as root
+    当安装完成后，可以使用root权限执行以下命令启动服务:
 
 		./start.sh
 
     If you want to stop it , input the following content as root
+    如果想要停止服务，使用root权限执行以下命令停止服务:
 
 		./stop.sh
 
-
-    When you start an installed Sunlogin Client , you can enter http://xxx.xxx.xxx.xxx:30080 ( xxx.xxx.xxx.xxx is your computer's ipv4 address or 127.0.0.1 ) in your browser and then do some operation (such as login��logout or change settings)
-
-
+    When you start an installed Sunlogin Client , you can enter http://xxx.xxx.xxx.xxx:30080 ( xxx.xxx.xxx.xxx is your computer's ipv4 address or 127.0.0.1 ) in your browser and then do some operation (such as login、logout or change settings)
+    当程序运行后，你可以在浏览器输入http://xxx.xxx.xxx.xxx:30080 ( xxx.xxx.xxx.xxx 是你电脑的IPV4地址，如果是本机访问，可以是127.0.0.1 ) 然后进行一些操作（如登录，注销或更改设置）
 
 Note:
+注意：
     1) You'd better close your system's firewall if you want have a better use of the functions on Sunlogin Client
-    2) You should make your system's firewall allow other computer to access 30080 port(TCP), if you want do operations in other computer(unless you close you firewall)
-    3) You should make your system's firewall allow other computer to access Wakeup port(UDP) you have set , if you want to use wake up function(unless you close you firewall)
-    4) You should make your system's firewall allow other computer to access LAN discovery port(UDP) you have set , if you want to direct connected by Sunlogin Remote within same LAN(unless you close you firewall)
+    1）为了保证功能正常使用，最好关掉你的系统防火墙
 
+    2) You should make your system's firewall allow other computer to access 30080 port(TCP), if you want do operations in other computer(unless you close you firewall)
+    2）你必须要让系统防火墙允许其他电脑访问你的30080端口（TCP），如果你想在其他计算机上进行操作（除非你关闭防火墙）
+
+    3) You should make your system's firewall allow other computer to access Wakeup port(UDP) you have set , if you want to use wake up function(unless you close you firewall)
+    3）如果你想使用唤醒功能，你应该让你的系统的防火墙允许其他计算机访问你设置的唤醒端口（UDP）（除非你关闭了防火墙）
+
+    4) You should make your system's firewall allow other computer to access LAN discovery port(UDP) you have set , if you want to direct connected by Sunlogin Remote within same LAN(unless you close you firewall)
+    4）如果您想要通过Sunlogin Remote在同一LAN内直接连接，您应该让系统的防火墙允许其他计算机访问您设置的LAN发现端口（UDP）（除非您关闭了防火墙）
 
 
 Copyright(C) 2009-2018 Oray-All Rights Reserved.
