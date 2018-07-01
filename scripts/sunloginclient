@@ -1,0 +1,12 @@
+[Unit]
+Description=check running sunloginclinet loop
+
+
+[Service]
+Type=simple
+ExecStart=-/usr/local/sunlogin/bin/oray_rundaemon -e 'bash /usr/local/sunlogin/etc/watch.sh'
+ExecStop=
+
+
+[Install]
+WantedBy=default.target
