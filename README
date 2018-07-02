@@ -8,6 +8,7 @@ sudo systemctl start runsunloginclient
 sudo systemctl stop runsunloginclient
 
 
+
 Sunlogin Client for linux Version 9.6.0.11866
 
 Function introduction:
@@ -26,6 +27,8 @@ Function introduction:
   4）唤醒功能：如果您有唤醒棒，可以通过Sunlogin Remote唤醒或关闭本机
   5）VPN：您可以通过VPN网络连接的其他计算机
 
+Tutorial address：https://bbs.deepin.org/forum.php?mod=viewthread&tid=159750
+中文图文教程地址：https://bbs.deepin.org/forum.php?mod=viewthread&tid=159750
 How to use:
 使用以下命令下载解压文件，并进入文件夹内:
   wget https://github.com/tiaen/sunloginclient_for_deepin/archive/master.zip
